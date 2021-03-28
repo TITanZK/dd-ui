@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/TITanZK/dd-ui/issues"
   },
-  "homepage": "https://github.com/TITanZK/dd-ui#readme"
+  "homepage": "https://github.com/TITanZK/dd-ui#readme",
+  "dependencies": {
+    "vue": "^2.5.16"
+  }
 }
