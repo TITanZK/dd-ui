@@ -2,61 +2,37 @@
 <html lang=zh-Hans>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover" />
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>多多</title>
+  <title>多多-UI</title>
   <style>
-    *{
+    * {
       margin: 0;
       padding: 0;
-      box-sizing:border-box;
+      box-sizing: border-box;
     }
+
     :root {
       --button-height: 32px;
-      --font-sizing:14px;
+      --font-sizing: 14px;
       --button-bg: white;
-      --button-active-bg:#eee;
+      --button-active-bg: #eee;
       --border-radius: 4px;
-      --color:#999;
-      --border-color:#999;
-      --border-color-hover:#666;
+      --color: #999;
+      --border-color: #999;
+      --border-color-hover: #666;
     }
-    body{
+
+    body {
       font-size: var(--font-sizing);
-    }
-  </style>
-  <style>
-    .d-button{
-      height: var(--button-height);
-      padding: 0 1em;
-      font: inherit;
-      border-radius: var(--border-radius);
-      border: 1px solid var(--border-color);
-      background: var(--button-bg);
-    }
-    .d-button:hover{
-      border-color: var(--border-color-hover);
-    }
-    .d-button:active{
-      border-color: var(--button-active-bg);
-    }
-    .d-button:focus{
-      outline: none;
     }
   </style>
 </head>
 <body>
-<div id="app">
-  <d-button></d-button>
-</div>
-<script src="./node_modules/vue/dist/vue.min.js"></script>
-<script src="./button.js"></script>
-<script>
-  new Vue({
-    el: '#app',
-
-  })
-
-</script>
+  <div id="app">
+    <d-button></d-button>
+  </div>
+  <script src="./src/app.js"></script>
 </body>
 </html>
