@@ -12,7 +12,16 @@
 <script>
 export default {
   name: "Button",
-  props: ['icon', 'iconPosition']
+  props: {
+    icon: {},
+    iconPosition: {
+      type: String,
+      default: 'left',
+      validate(value) {//当 prop 验证失败的时候，(开发环境构建版本的) Vue 将会产生一个控制台的警告。
+        return value === 'left' || value === 'right'
+      }
+    }
+  }
 }
 </script>
 
@@ -24,7 +33,7 @@ export default {
   border-radius: var(--border-radius);
   border: 1px solid var(--border-color);
   background: var(--button-bg);
-  vertical-align: middle;//css真的贱，不对齐是真的烦
+  vertical-align: middle; //css真的贱，不对齐是真的烦
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -56,7 +65,8 @@ export default {
       margin-right: 0;
       margin-left: .3em;
     }
-    >.content{
+
+    > .content {
       order: 1;
     }
   }
