@@ -13,6 +13,14 @@
       box-sizing: border-box;
     }
 
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+
     :root {
       --button-height: 32px;
       --font-sizing: 14px;
@@ -25,14 +33,17 @@
     }
 
     body {
+      margin: 50px;
       font-size: var(--font-sizing);
     }
   </style>
 </head>
 <body>
-  <div id="app">
-    <d-button></d-button>
-  </div>
-  <script src="./src/app.js"></script>
+<div id="app">
+  <d-button icon="settings">按钮</d-button>
+  <d-button icon="settings" icon-position="right">按钮</d-button>
+</div>
+<script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_2449847_tbhloybspm.js"></script>
 </body>
 </html>
