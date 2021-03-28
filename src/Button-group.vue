@@ -6,7 +6,15 @@
 
 <script>
 export default {
-  name: "Button-group"
+  name: "Button-group",
+  mounted() {
+     for(let node of this.$el.children){
+       let name  = node.nodeName.toLocaleLowerCase()
+       if(name !== 'button'){
+         console.log(`d-button-group 的子元素应是 g-button,你写的是 ${name}`)
+       }
+     }
+  }
 }
 </script>
 
@@ -14,7 +22,6 @@ export default {
 .d-button-group {
   display: inline-flex;vertical-align: middle;
   > .d-button {
-    border: 1px solid red;
     border-radius: 0;
     margin-left: -1px;
     &:first-child{
