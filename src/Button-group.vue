@@ -8,12 +8,12 @@
 export default {
   name: "Button-group",
   mounted() {
-     for(let node of this.$el.children){
-       let name  = node.nodeName.toLocaleLowerCase()
-       if(name !== 'button'){
-         console.log(`d-button-group 的子元素应是 g-button,你写的是 ${name}`)
-       }
-     }
+    for (let node of this.$el.children) {
+      let name = node.nodeName.toLocaleLowerCase()
+      if (name !== 'button') {
+        console.log(`d-button-group 的子元素应是 g-button,你写的是 ${name}`)
+      }
+    }
   }
 }
 </script>
@@ -23,19 +23,16 @@ export default {
   display: inline-flex;vertical-align: middle;
   > .d-button {
     border-radius: 0;
-    margin-left: -1px;
-    &:first-child{
+    &:not(:first-child) {margin-left: -1px;}
+    &:first-child {
       border-top-left-radius: var(--border-radius);
       border-bottom-left-radius: var(--border-radius);
     }
-    &:last-child{
+    &:last-child {
       border-top-right-radius: var(--border-radius);
       border-bottom-right-radius: var(--border-radius);
     }
-    &:hover{
-      position: relative;
-      z-index: 1;
-    }
+    &:hover {position: relative;z-index: 1;}
   }
 }
 </style>
