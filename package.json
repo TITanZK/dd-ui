@@ -1,6 +1,6 @@
 {
-  "name": "duoduo",
-  "version": "0.0.1",
+  "name": "dd-ui-test-1",
+  "version": "0.0.2",
   "description": "一个UI框架",
   "main": "index.js",
   "scripts": {
