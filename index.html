@@ -28,13 +28,16 @@
       margin: 50px;
       font-size: var(--font-sizing);
     }
-    .box{
+    .box {
       margin: 20px;
     }
   </style>
 </head>
 <body>
 <div id="app">
+  <div class="box">
+    <d-input v-model="message"></d-input>
+  </div>
   <div class="box">
     <d-input value="你好" disabled></d-input>
     <d-input value="你好" readonly></d-input>
