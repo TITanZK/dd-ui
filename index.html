@@ -12,7 +12,6 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     :root {
       --button-height: 32px;
       --font-sizing: 14px;
@@ -23,24 +22,20 @@
       --border-color: #999;
       --border-color-hover: #666;
     }
-
     body {
       margin: 50px;
       font-size: var(--font-sizing);
-    }
-    .box {
-      margin: 20px;
     }
   </style>
 </head>
 <body>
 <div id="app">
   <div style="border: 1px solid black;">
-    <d-row :gutter="80">
+    <d-row :gutter="80" align="right">
       <d-col>1</d-col>
       <d-col>2</d-col>
     </d-row>
-    <d-row :gutter="40">
+    <d-row :gutter="40" align="center">
       <d-col>1</d-col>
       <d-col>2</d-col>
     </d-row>
