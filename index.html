@@ -31,6 +31,10 @@
 <body>
 <div id="app">
   <div style="border: 1px solid black;">
+    <d-row>
+      <d-col :phone="{span:8,offset:0}" :ipad="{span:10}" :narrow-pc="{span:12}">1</d-col>
+      <d-col :phone="{span:8,offset:0}" :ipad="{span:10}" :pc="{span:10}">3</d-col>
+    </d-row>
     <d-row :gutter="80" align="right">
       <d-col>1</d-col>
       <d-col>2</d-col>

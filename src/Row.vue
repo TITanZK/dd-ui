@@ -21,9 +21,9 @@ export default {
       let {gutter} = this
       return {marginLeft: -gutter / 2 + 'px', marginRight: -gutter / 2 + 'px'}
     },
-    rowClass(){
+    rowClass() {
       let {align} = this
-      return [align&&`align-${align}`]
+      return [align && `align-${align}`]
     }
   },
   mounted() {
@@ -35,10 +35,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.row {
-  display: flex;
-  &.align-left{justify-content: flex-start}
-  &.align-right{justify-content: flex-end}
-  &.align-center{justify-content: center}
-}
+.row {display: flex;flex-wrap: wrap}
+
+.align-left {justify-content: flex-start}
+
+.align-right {justify-content: flex-end}
+
+.align-center {justify-content: center}
 </style>
