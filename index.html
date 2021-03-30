@@ -35,26 +35,34 @@
 </head>
 <body>
 <div id="app">
-  <div class="box">
-    <d-input v-model="message"></d-input>
-  </div>
-  <div class="box">
-    <d-input value="你好" disabled></d-input>
-    <d-input value="你好" readonly></d-input>
-    <d-input value="你好"></d-input>
-  </div>
-  <div class="box">
-    <d-input value="你好" error="昵称最少2个字"></d-input>
-  </div>
-  <div class="box">
-    <d-button icon="settings" :loading="loading2" @click="loading2 = !loading2" icon-position="left">按钮</d-button>
-    <d-button icon="settings" :loading="loading1" @click="loading1 = !loading1">按钮</d-button>
-    <d-button icon="settings" :loading="loading3" @click="loading3 = !loading3" icon-position="right">按钮</d-button>
-    <d-button-group>
-      <d-button icon="left" icon-position="left">上一页</d-button>
-      <d-button>更多</d-button>
-      <d-button icon="right" icon-position="right">下一页</d-button>
-    </d-button-group>
+  <div style="border: 1px solid black;">
+    <d-row :gutter="80">
+      <d-col>1</d-col>
+      <d-col>2</d-col>
+    </d-row>
+    <d-row :gutter="40">
+      <d-col>1</d-col>
+      <d-col>2</d-col>
+    </d-row>
+    <d-row :gutter="20">
+      <d-col>1</d-col>
+      <d-col>2</d-col>
+      <d-col>3</d-col>
+    </d-row>
+    <d-row gutter="20">
+      <d-col :span="2">1</d-col>
+      <d-col :span="6" :offset="6">2</d-col>
+      <d-col :span="8" :offset="2">2</d-col>
+    </d-row>
+    <d-row>
+      <d-col :span="2">1</d-col>
+      <d-col :span="20" :offset="2">2</d-col>
+    </d-row>
+    <d-row>
+      <d-col :span="2">1</d-col>
+      <d-col :span="18">2</d-col>
+      <d-col :span="4">2</d-col>
+    </d-row>
   </div>
 </div>
 <script src="./src/app.js"></script>
