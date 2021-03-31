@@ -19,7 +19,7 @@ export default {
     enableHtml: {type: Boolean, default: false},
     autoClose: {
       type: [Number, Boolean],
-      default: true,
+      default: 5,
       validator(value) {
         return value === false || typeof value === 'number';
       }
