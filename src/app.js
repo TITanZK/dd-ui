@@ -35,10 +35,12 @@ new Vue({
     message: '你好'
   },
   created() {
+    this.$toast('添加成功', {
+      enableHtml: true
+    })
   },
   methods: {
     showToast() {
-      this.$toast('我是 message')
     }
   }
 })
