@@ -23,18 +23,25 @@
       --border-color-hover: #666;
     }
     body {
-      margin: 50px;
+      /*margin: 50px;*/
       font-size: var(--font-sizing);
+    }
+    .demo {
+      border: 1px solid red;
+      min-height: 100px;
     }
   </style>
 </head>
 <body>
 <div id="app">
-  <div style="border: 1px solid black;">
-    <d-row>
-      <d-col :span="22" :offset="2" :narrow-pc="{span:12,offset:12}">1</d-col>
-    </d-row>
-  </div>
+  <d-layout style="height: 100vh;">
+    <d-sider class="demo">sider</d-sider>
+    <d-layout>
+      <d-header class="demo">header</d-header>
+      <d-content class="demo">content</d-content>
+      <d-footer class="demo">footer</d-footer>
+    </d-layout>
+  </d-layout>
 </div>
 <script src="./src/app.js"></script>
 </body>
