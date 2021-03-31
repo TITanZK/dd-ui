@@ -40,7 +40,7 @@ new Vue({
   methods: {
     showToast() {
       this.$toast('添加成功', {
-        position:'middle',
+        position:'top',
         enableHtml: true,
         closeButton: {text:'大傻瓜',callback(){console.log('智商下线')}},
         autoClose: false,

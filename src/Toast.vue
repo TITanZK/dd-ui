@@ -77,7 +77,13 @@ export default {
 $font-size: 14px;
 $toast-min-height: 40px;
 $toast-bg: rgba(0, 0, 0, 0.75);
+@keyframes fade-in {
+  0% {opacity: 0;transform: translateY(100%)}
+  100% {opacity: 1;transform: translateY(0%)}
+}
+
 .toast {
+  animation: fade-in 1s;
   min-height: $toast-min-height;font-size: $font-size;line-height: 1.8;
   position: fixed;display: flex;align-items: center; padding: 0 16px;
   border-radius: 4px;color: white;background: $toast-bg;box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
@@ -90,13 +96,13 @@ $toast-bg: rgba(0, 0, 0, 0.75);
     transform: translateX(-50%);
   }
   &.position-bottom {
-    bottom:0;
+    bottom: 0;
     transform: translateX(-50%);
   }
   &.position-middle {
-    top:50%;
-    transform: translate(-50%,-50%);
-    
+    top: 50%;
+    transform: translate(-50%, -50%);
+
   }
 }
 
