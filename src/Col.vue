@@ -9,7 +9,7 @@ let validator = (value) => {
   let keys = Object.keys(value)
   let valid = true
   keys.forEach(key => {
-    if (!['span', 'offset'].includes(key)) {
+    if (!['span', 'offset'].indexOf(key) >= 0) {
       valid = false
     }
   })
@@ -30,10 +30,16 @@ export default {
   },
   methods: {
     createClass(obj, str = '') {  //str:ipad-
-      if (!obj) {return []}
+      if (!obj) {
+        return []
+      }
       let array = []
-      if (obj.span) {array.push(`col-${str}${obj.span}`)}
-      if (obj.offset) {array.push(`offset-${str}${obj.offset}`)}
+      if (obj.span) {
+        array.push(`col-${str}${obj.span}`)
+      }
+      if (obj.offset) {
+        array.push(`offset-${str}${obj.offset}`)
+      }
       return array
     }
   },

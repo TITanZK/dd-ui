@@ -36,7 +36,11 @@ new Vue({
   },
   created() {
     this.$toast('添加成功', {
-      enableHtml: true
+      position:'middle',
+      enableHtml: true,
+      closeButton: {text:'大傻瓜',callback(){console.log('智商下线')}},
+      autoClose: false,
+      autoCloseDelay: 8
     })
   },
   methods: {
