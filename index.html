@@ -26,25 +26,12 @@
       /*margin: 50px;*/
       font-size: var(--font-sizing);
     }
-    .demo {
-      border: 1px solid red;
-      min-height: 100px;
-    }
-    .sider{background: darkgrey;width: 200px}
-    .header{background: #999;height: 100px;}
-    .footer{background: #ccc;height: 100px;}
+    
   </style>
 </head>
 <body>
 <div id="app">
-  <d-layout style="height: 100vh;">
-    <d-sider class="demo">sider</d-sider>
-    <d-layout>
-      <d-header class="demo">header</d-header>
-      <d-content class="demo">content</d-content>
-      <d-footer class="demo">footer</d-footer>
-    </d-layout>
-  </d-layout>
+<button @click="showToast">信息</button>
 </div>
 <script src="./src/app.js"></script>
 </body>
