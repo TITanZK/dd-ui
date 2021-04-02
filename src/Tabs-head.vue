@@ -6,13 +6,17 @@
 </template>
 
 <script>
-  export default {
-    name: "Tabs-head"
+export default {
+  name: "Tabs-head",
+  inject: ['eventBus'],
+  created() {
+    console.log(this.eventBus)
   }
+}
 </script>
 
 <style scoped lang="scss">
- .tabs-head{
- 
- }
+.tabs-head {
+
+}
 </style>
