@@ -25,8 +25,9 @@ export default {
   provide() {
     return {eventBus: this.eventBus}
   },
-  created() {
-    // this.$emit('update:selected')
+  mounted() {
+    // this.$emit('update:selected',)
+    this.eventBus.$emit('update:selected',this.selected)
   }
 }
 </script>
