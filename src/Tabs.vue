@@ -26,8 +26,16 @@ export default {
     return {eventBus: this.eventBus}
   },
   mounted() {
-    // this.$emit('update:selected',)
-    this.eventBus.$emit('update:selected',this.selected)
+    this.$children.forEach(vm => {
+      if (vm.$options.name === 'Tabs-head') {
+        vm.$children.forEach(item => {
+          if (item.$options.name === 'Tabs-item' && item.name === this.selected) {
+            this.eventBus.$emit('update:selected',this.selected,item)
+          }
+        })
+      }
+    })
+    this.eventBus.$emit('update:selected', this.selected)
   }
 }
 </script>
