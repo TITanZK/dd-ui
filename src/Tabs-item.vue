@@ -36,10 +36,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$color:blue;
+$color:#409EFF;
 .tabs-item {
   flex-shrink: 0;
-  padding: 0 2em;
+  padding: 0 1em;
   cursor: pointer;
   height: 100%;
   display: flex;

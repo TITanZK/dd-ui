@@ -3,7 +3,7 @@
     <slot></slot>
     <div class="line" ref="line"></div>
     <div class="actions-wrapper">
-    <slot name="actions"></slot>
+      <slot name="actions"></slot>
     </div>
   </div>
 </template>
@@ -12,29 +12,31 @@
 export default {
   name: "Tabs-head",
   inject: ['eventBus'],
-  created() {
-    // this.eventBus.$on('update:selected',(item,vm)=>{
-    // })
+  mounted() {
+    this.eventBus.$on('update:selected', (item, vm) => {
+      const {width,left} = vm.$el.getBoundingClientRect()
+      this.$refs.line.style.width = `${width}px`
+      this.$refs.line.style.left = `${left}px`
+    })
   }
 }
 </script>
 
 <style scoped lang="scss">
 $tab-height: 40px;
-$color:blue;
+$color: #409EFF;
 .tabs-head {
-  border: 1px solid red;
   display: flex;
+  justify-content: flex-start;
   height: $tab-height;
   position: relative;
-  >.line{
+  > .line {
     position: absolute;
     bottom: 0;
     border-bottom: 1px solid $color;
-    width: 100px;
+    transition: all 300ms;
   }
-  justify-content: flex-start;
-  >.actions-wrapper{
+  > .actions-wrapper {
     margin-left: auto;
   }
 }
