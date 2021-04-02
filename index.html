@@ -26,13 +26,31 @@
       /*margin: 50px;*/
       font-size: var(--font-sizing);
     }
-    
+
   </style>
 </head>
 <body>
 <div id="app">
-<button @click="showToast">信息</button>
+  <d-tabs :selected.sync="selectedTab">
+    <d-tabs-head>
+      <template slot="actions"><button>设置</button></template>
+      <d-tabs-item name="tencent">腾讯视频</d-tabs-item>
+      <d-tabs-item name="youku" disabled>优酷视频</d-tabs-item>
+      <d-tabs-item name="iqiyi">爱奇艺视频</d-tabs-item>
+    </d-tabs-head>
+    <d-tabs-body>
+      <d-tabs-pane name="tencent">腾讯相关资讯</d-tabs-pane>
+      <d-tabs-pane name="youku">优酷相关资讯</d-tabs-pane>
+      <d-tabs-pane name="iqiyi">爱奇艺相关资讯</d-tabs-pane>
+    </d-tabs-body>
+  </d-tabs>
 </div>
 <script src="./src/app.js"></script>
 </body>
 </html>
+<script>
+  import Button from "./src/Button"
+  export default {
+    components: {Button}
+  }
+</script>
