@@ -12,6 +12,11 @@ import Content from "./Content"
 import Header from "./Header"
 import Toast from "./Toast"
 import plugin from "./plugin"
+import Tabs from "./Tabs"
+import TabsHead from './Tabs-head'
+import TabsBody from './Tabs-body'
+import TabsItem from './Tabs-item'
+import TabsPane from './Tabs-pane'
 
 Vue.component('d-button', Button)
 Vue.component('d-icon', Icon)
@@ -26,13 +31,19 @@ Vue.component('d-content', Content)
 Vue.component('d-header', Header)
 Vue.component('d-toast', Toast)
 Vue.use(plugin)
+Vue.component('d-tabs', Tabs)
+Vue.component('d-tabs-head', TabsHead)
+Vue.component('d-tabs-body', TabsBody)
+Vue.component('d-tabs-item', TabsItem)
+Vue.component('d-tabs-pane', TabsPane)
 new Vue({
   el: '#app',
   data: {
     loading1: false,
     loading2: true,
     loading3: false,
-    message: '你好'
+    message: '你好',
+    selectedTab:'tencent'
   },
   created() {
 
