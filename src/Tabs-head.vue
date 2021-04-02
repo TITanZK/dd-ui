@@ -12,7 +12,6 @@ export default {
   name: "Tabs-head",
   inject: ['eventBus'],
   created() {
-    console.log(this.eventBus)
   }
 }
 </script>
@@ -24,7 +23,6 @@ $tab-height: 40px;
   display: flex;
   height: $tab-height;
   justify-content: flex-start;
-  align-items: center;
   >.actions-wrapper{
     margin-left: auto;
   }
