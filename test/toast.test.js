@@ -40,8 +40,10 @@ describe('Toast', () => {
       }).$mount()
       let closeButton = vm.$el.querySelector('.close')
       expect(closeButton.textContent.trim()).to.eq('关闭')
-      closeButton.click()
-      expect(callback).to.have.been.called
+      vm.$nextTick(() => {
+        closeButton.click()
+        expect(callback).to.have.been.called
+      })
     })
 
     it('接受 enableHtml', () => {
