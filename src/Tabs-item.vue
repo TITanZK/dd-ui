@@ -46,7 +46,6 @@ $color:#409EFF;
   align-items: center;
   &.active{
     color: $color;
-    font-weight: bold;
   }
 }
 </style>
