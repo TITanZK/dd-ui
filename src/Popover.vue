@@ -1,5 +1,5 @@
 <template>
-  <div class="popover" @click.stop="xxx">
+  <div class="popover" @click.stop="onClick">
     <div ref="contentWrapper" class="content-wrapper" v-if="visible">
       <slot name="content"></slot>
     </div>
@@ -18,21 +18,28 @@ export default {
   mounted() {
   },
   methods: {
-    xxx() {
-      this.visible = !this.visible
-      if (this.visible === true) {
-        this.$nextTick(() => {
-          document.body.appendChild(this.$refs.contentWrapper)
-          const {left, top} = this.$refs.triggerWrapper.getBoundingClientRect()
-          this.$refs.contentWrapper.style.left = left + screenX + 'px'
-          this.$refs.contentWrapper.style.top = top + scrollY + 'px'
-
-          let eventHandle = () => {
-            this.visible = false
-            document.removeEventListener('click', eventHandle)// 删除监听器
-          }
-          document.addEventListener('click', eventHandle)
-        })
+    onClick(e) {
+      console.log(e.target)
+      if (this.$refs.triggerWrapper.contains(e.target)) {
+        console.log('xia')
+        this.visible = !this.visible
+        if (this.visible === true) {
+          this.$nextTick(() => {
+            document.body.appendChild(this.$refs.contentWrapper)
+            const {left, top} = this.$refs.triggerWrapper.getBoundingClientRect()
+            this.$refs.contentWrapper.style.left = left + screenX + 'px'
+            this.$refs.contentWrapper.style.top = top + scrollY + 'px'
+            let eventHandle = (e) => {
+              if (!this.$refs.contentWrapper.contains(e.target)) {
+                this.visible = false
+                document.removeEventListener('click', eventHandle)// 删除监听器
+              }
+            }
+            document.addEventListener('click', eventHandle)
+          })
+        }
+      } else {
+        console.log('shang')
       }
     }
   }
