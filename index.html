@@ -33,11 +33,12 @@
 </head>
 <body>
 <div id="app">
-  <d-collapse selected="2">
+  <d-collapse :selected.sync="selectedItem">
     <d-collapse-item title="标题1" name="1">折叠一</d-collapse-item>
     <d-collapse-item title="标题2" name="2">折叠二</d-collapse-item>
     <d-collapse-item title="标题3" name="3">折叠三</d-collapse-item>
   </d-collapse>
+  {{selectedItem}}
 </div>
 <script src="./src/app.js"></script>
 </body>

@@ -49,7 +49,8 @@ new Vue({
     loading2: true,
     loading3: false,
     message: '你好',
-    selectedTab:'tencent'
+    selectedTab:'tencent',
+    selectedItem:'2'
   },
   created() {
 
