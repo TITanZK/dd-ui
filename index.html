@@ -36,8 +36,10 @@
 <div id="app">
   <div style="overflow: hidden; padding: 5px;">
     <d-popover>
-      <template slot="content">
+      <template slot="content" slot-scope="{close}">
         <div>这是一段内容,这是一段内容,这是一段内容,这是一段内容。</div>
+        <div>这是一段内容,这是一段内容,这是一段内容,这是一段内容。<a href="https://www.baidu.com">sss</a></div>
+        <d-button @click="close">关闭</d-button>
       </template>
       <d-button>按钮</d-button>
     </d-popover>
