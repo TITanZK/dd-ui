@@ -50,7 +50,7 @@ new Vue({
     loading3: false,
     message: '你好',
     selectedTab:'tencent',
-    selectedItem:'2'
+    selectedItem:['2']
   },
   created() {
 
