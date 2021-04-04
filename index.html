@@ -27,7 +27,8 @@
       font-size: var(--font-sizing);
     }
     #app {
-      padding: 100px;
+      padding-left: 300px;
+      padding-top: 200px;
     }
   </style>
 </head>
@@ -40,7 +41,20 @@
       </template>
       <d-button>按钮</d-button>
     </d-popover>
-    <d-popover>
+    <d-popover position="bottom">
+      <template slot="content">
+        <div>这是一段内容,这是一段内容,这是一段内容,这是一段内容。</div>
+      </template>
+      <d-button>按钮</d-button>
+    </d-popover>
+    <br>
+    <d-popover position="left">
+      <template slot="content">
+        <div>这是一段内容,这是一段内容,这是一段内容,这是一段内容。</div>
+      </template>
+      <d-button>按钮</d-button>
+    </d-popover>
+    <d-popover position="right">
       <template slot="content">
         <div>这是一段内容,这是一段内容,这是一段内容,这是一段内容。</div>
       </template>
