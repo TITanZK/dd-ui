@@ -130,26 +130,26 @@ $border-radius: 4px;
   &.position-top {
     transform: translateY(-100%);
     margin-top: -10px;
-    &::before, &::after {left: 15px;}
+    &::before, &::after {left: 15px;border-bottom: none;}
     &::before {border-top-color: $border-color;top: 100%;}
     &::after {border-top-color: white;top: calc(100% - 1px);}
   }
   &.position-bottom {
     margin-top: 10px;
-    &::before, &::after {left: 15px;}
+    &::before, &::after {left: 15px;border-top: none;}
     &::before {border-bottom-color: $border-color;bottom: 100%;}
     &::after {border-bottom-color: white;bottom: calc(100% - 1px);}
   }
   &.position-left {
     transform: translateX(-100%);
     margin-left: -10px;
-    &::before, &::after {transform: translateY(-50%);top: 50%;}
+    &::before, &::after {transform: translateY(-50%);top: 50%;border-right: none;}
     &::before {border-left-color: $border-color;left: 100%;}
     &::after {border-left-color: white;left: calc(100% - 1px);}
   }
   &.position-right {
     margin-left: 10px;
-    &::before, &::after {transform: translateY(-50%);top: 50%;}
+    &::before, &::after {transform: translateY(-50%);top: 50%;border-left: none;}
     &::before {border-right-color: $border-color;right: 100%;}
     &::after {border-right-color: white;right: calc(100% - 1px);}
   }
