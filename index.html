@@ -33,18 +33,21 @@
 </head>
 <body>
 <div id="app">
-  <d-popover>
-    <template slot="content">
-      <div>popover内容</div>
-    </template>
-    <button>按钮</button>
-  </d-popover>
-  <d-popover>
-    <template slot="content">
-      <div>popover内容</div>
-    </template>
-    <button>按钮</button>
-  </d-popover>
+  <div style="overflow: hidden;border: 1px solid red; padding: 5px;" @click="yyy">
+    <d-popover>
+      <template slot="content">
+        <div>popover内容</div>
+      </template>
+      <button>按钮</button>
+    </d-popover>
+    <d-popover>
+      <template slot="content">
+        <div>popover内容</div>
+      </template>
+      <button>按钮</button>
+    </d-popover>
+  </div>
+
 </div>
 <script src="./src/app.js"></script>
 </body>

@@ -51,6 +51,9 @@ new Vue({
 
   },
   methods: {
+    yyy(){
+      console.log('yyy')
+    },
     showToast() {
       this.$toast('添加成功', {
         position:'top',
