@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'DuoduoUI',
+  title: '多多 UI',
   description: '一个好用且精美的UI框架',
   themeConfig: {
     displayAllHeaders: true, // 默认值：false
