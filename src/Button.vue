@@ -53,7 +53,7 @@ $border-color-hover: #666;
   height: $button-height;padding: 0 1em;font: inherit;border-radius: $border-radius;
   border: 1px solid $border-color;background: $button-bg;
   vertical-align: middle; //css真的贱，不对齐是真的烦
-  display: inline-flex;
+  display: inline-flex;cursor: pointer;
   justify-content: center;align-items: center;
 
   &:hover {border-color: $border-color-hover;}
