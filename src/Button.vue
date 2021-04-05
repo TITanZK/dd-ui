@@ -52,7 +52,8 @@ $border-color-hover: #666;
   .loading {animation: spin 2s infinite linear;}
   height: $button-height;padding: 0 1em;font: inherit;border-radius: $border-radius;
   border: 1px solid $border-color;background: $button-bg;
-  vertical-align: middle; //css真的贱，不对齐是真的烦display: inline-flex;
+  vertical-align: middle; //css真的贱，不对齐是真的烦
+  display: inline-flex;
   justify-content: center;align-items: center;
 
   &:hover {border-color: $border-color-hover;}
