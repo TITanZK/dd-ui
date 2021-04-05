@@ -14,7 +14,7 @@ export default {
   },
   created() {
     // console.log('执行了')
-    console.log(Button)
+    // console.log(Button)
   },
   mounted() {
     // import('../../../src/Button').then(module=>{
@@ -25,5 +25,6 @@ export default {
 }
 
 </script>
+
 <style>
 </style>
