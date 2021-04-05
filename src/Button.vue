@@ -12,7 +12,7 @@
 import Icon from "./Icon"
 
 export default {
-  components:{
+  components: {
     'd-icon': Icon
   },
   name: "Button",
@@ -34,6 +34,15 @@ export default {
 </script>
 
 <style scoped lang="scss">
+$button-height: 32px;
+$font-size: 14px;
+$button-bg: white;
+$button-active-bg: #eee;
+$border-radius: 4px;
+$color: #999;
+$border-color: #999;
+$border-color-hover: #666;
+
 @keyframes spin {
   0% {transform: rotate(0deg)}
   100% { transform: rotate(360deg)}
@@ -41,13 +50,13 @@ export default {
 
 .d-button {
   .loading {animation: spin 2s infinite linear;}
-  height: var(--button-height);padding: 0 1em;font: inherit;
-  border-radius: var(--border-radius);border: 1px solid var(--border-color);
-  background: var(--button-bg);vertical-align: middle; //css真的贱，不对齐是真的烦
-  display: inline-flex;justify-content: center;align-items: center;
+  height: $button-height;padding: 0 1em;font: inherit;border-radius: $border-radius;
+  border: 1px solid $border-color;background: $button-bg;
+  vertical-align: middle; //css真的贱，不对齐是真的烦display: inline-flex;
+  justify-content: center;align-items: center;
 
-  &:hover {border-color: var(--border-color-hover);}
-  &:active {border-color: var(--button-active-bg);}
+  &:hover {border-color: $border-color-hover;}
+  &:active {border-color: $button-active-bg;}
   &:focus {outline: none;}
 
   > .icon {order: 1;margin-right: .3em}
