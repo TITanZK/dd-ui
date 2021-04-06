@@ -33,14 +33,11 @@
 </head>
 <body>
 <div id="app">
-  <d-button>默认按钮</d-button>
-  <d-button icon="settings" loading icon-position="right">默认按钮</d-button>
   <d-collapse :selected.sync="selectedItem" single>
-    <d-collapse-item title="标题1" name="1">折叠一</d-collapse-item>
-    <d-collapse-item title="标题2" name="2">折叠二</d-collapse-item>
-    <d-collapse-item title="标题3" name="3">折叠三</d-collapse-item>
+    <d-collapse-item title="李白" name="1">君不见黄河之水天上来，奔流到海不复回。君不见高堂明镜悲白发，朝如青丝暮成雪。</d-collapse-item>
+    <d-collapse-item title="杜甫" name="2">人才虽高，不务学问，不能致圣。刘向十日画一水，五日画一石。</d-collapse-item>
+    <d-collapse-item title="曹植" name="3">其形也，翩若惊鸿，婉若游龙，荣曜秋菊，华茂春松。髣髴兮若轻云之蔽月，飘飖兮若流风之回雪。</d-collapse-item>
   </d-collapse>
-  {{selectedItem}}
 </div>
 <script src="./src/app.js"></script>
 </body>

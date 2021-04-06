@@ -1,11 +1,11 @@
 ---
-title: Button 按钮
+title: Popover 弹出框
 ---
 
-### Button 按钮 
+### Popover 弹出框
 
 #### 样式预览
-<button-demo></button-demo>
+<popover-demo></popover-demo>
 
 #### 使用方法
 未完成
@@ -23,18 +23,18 @@ title: Button 按钮
      </thead>
     <tbody>
         <tr>
-            <td>icon</td>
-            <td>图标</td>
+            <td>position</td>
+            <td>弹出框位置</td>
             <td>string</td>
-            <td>—</td>
-            <td>—</td>
+            <td>top/bottom/left/right</td>
+            <td>top</td>
         </tr>
         <tr>
-            <td>iconPosition</td>
-            <td>图标位置</td>
+            <td>trigger</td>
+            <td>弹出框触发方式</td>
             <td>string</td>
-            <td>left / right</td>
-            <td>left</td>
+            <td>click / hover</td>
+            <td>click</td>
         </tr>
         <tr>
             <td>loading</td>

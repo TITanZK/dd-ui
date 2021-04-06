@@ -6,8 +6,8 @@ module.exports = {
     logo: '/assets/img/hero.png',
     nav: [
       {text: '主页', link: '/'},
-      {text: '文档', link: '/guide/'},
-      {text: '交流', link: 'https://google.com'},
+      {text: '文档', link: '/get-started/'},
+      {text: 'GitHub', link: 'https://github.com/TITanZK/dd-ui'},
     ],
     sidebar: [
       {
@@ -21,7 +21,14 @@ module.exports = {
         title: '组件',
         collapsable: false, // 可选的, 默认值是 true,
         children: [
-          '/components/button'
+          '/components/button',
+          '/components/input',
+          '/components/grid',
+          '/components/layout',
+          '/components/toast',
+          '/components/tabs',
+          '/components/popover',
+          '/components/collapse'
         ]
       }
     ]
