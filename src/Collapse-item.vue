@@ -47,7 +47,7 @@ $border-radius: 4px;
     min-height: 32px;
     display: flex;
     align-items: center;
-    padding: 0 8px;
+    padding: 8px;
   }
   &:first-child {
     > .title {
@@ -60,6 +60,10 @@ $border-radius: 4px;
       border-bottom-left-radius: $border-radius;
       border-bottom-right-radius: $border-radius;
     }
+  }
+  > .content {
+    padding: 1em;
+    border-bottom: 1px solid $border-color;
   }
 }
 </style>

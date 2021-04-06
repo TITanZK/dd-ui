@@ -56,6 +56,7 @@ $border-color: #ddd;
 $border-radius: 4px;
 .collapse {
   border: 1px solid $border-color;
+  border-bottom: none;
   border-radius: $border-radius;
 }
 </style>
