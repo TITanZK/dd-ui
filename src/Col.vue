@@ -7,10 +7,10 @@
 <script>
 let validator = (value) => {
   let keys = Object.keys(value)
-  let valid = true
+  let valid = false
   keys.forEach(key => {
-    if (!['span', 'offset'].indexOf(key) >= 0) {
-      valid = false
+    if (['span', 'offset'].indexOf(key) >= 0) {
+      valid = true
     }
   })
   return valid
