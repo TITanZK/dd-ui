@@ -30,7 +30,7 @@ export default {
 * {box-sizing: border-box}
 
 .wrapper {
-  margin-top: 20px;
+  margin: 20px 0 48px;
   > * {
     margin-right: 20px;
   }
