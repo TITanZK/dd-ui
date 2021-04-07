@@ -5,13 +5,13 @@
         <d-tabs-item name="tencent">腾讯视频</d-tabs-item>
         <d-tabs-item name="youku">优酷视频</d-tabs-item>
         <d-tabs-item name="iqiyi">爱奇艺视频</d-tabs-item>
-        <d-tabs-item name="youTub" disabled>youTub</d-tabs-item>
+        <d-tabs-item name="youTub" disabled>YouTub</d-tabs-item>
       </d-tabs-head>
       <d-tabs-body>
         <d-tabs-pane name="tencent">腾讯相关资讯</d-tabs-pane>
         <d-tabs-pane name="youku">优酷相关资讯</d-tabs-pane>
         <d-tabs-pane name="iqiyi">爱奇艺相关资讯</d-tabs-pane>
-        <d-tabs-pane name="youTub">youTub相关资讯</d-tabs-pane>
+        <d-tabs-pane name="youTub">YouTub相关资讯</d-tabs-pane>
       </d-tabs-body>
     </d-tabs>
   </div>
