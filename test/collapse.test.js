@@ -53,7 +53,7 @@ describe('Collapse', () => {
     const vm = new Vue({
       el: div,
       data: {
-        xxx: ['1']
+        xxx: ['2']
       }
     })
     setTimeout(() => {

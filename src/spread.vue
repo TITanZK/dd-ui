@@ -1,7 +1,7 @@
 <template>
   <transition @before-enter="beforeEnter" @enter="enter" @after-enter="afterEnter" @before-leave="beforeLeave"
               @leave="leave" @after-leave="afterLeave">
-    <div class="d-spread" v-show="visible">
+    <div id="spreadTest" class="d-spread" v-if="visible">
       <slot></slot>
     </div>
   </transition>
