@@ -8,7 +8,44 @@ title: Button 按钮
 <button-demo></button-demo>
 
 #### 使用方法
-未完成
+```vue
+<template>
+  <div>
+    <d-row class="first">
+      <d-button>默认按钮</d-button>
+      <d-button icon="settings">有图标</d-button>
+      <d-button icon="settings" icon-position="right">图标右</d-button>
+
+      <d-button :loading="loading1">有状态</d-button>
+      <d-button :loading="loading2" @click="loading2 = !loading2">点击触发</d-button>
+
+      <d-button-group>
+        <d-button icon="left" icon-position="left">上一页</d-button>
+        <d-button>更多</d-button>
+        <d-button icon="right" icon-position="right">下一页</d-button>
+      </d-button-group>
+    </d-row>
+  </div>
+</template>
+
+<script>
+import { Button, ButtonGroup, Row } from 'ddui-dev'
+
+export default {
+  data() {
+    return {
+      loading1: true,
+      loading2: false,
+    }
+  },
+  components: {
+    'd-button': Button,
+    'd-button-group': ButtonGroup,
+    'd-row': Row,
+  },
+}
+</script>
+```
 
 #### Attributes
 <table>

@@ -7,57 +7,245 @@ title: Grid 网格布局
 
 #### 基础布局
 最基础的栅格布局。
-<br>
 
 <grid-demo></grid-demo>
 
 #### 使用方法  
-未完成
+```vue
+<template>
+  <div>
+    <d-row>
+      <d-col :span="24"> <div class="grid-content bg-purple-dark"></div> </d-col>
+    </d-row>
+    <d-row>
+      <d-col :span="12"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="12"> <div class="grid-content bg-purple-light"></div> </d-col>
+    </d-row>
+    <d-row>
+      <d-col :span="8"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="8"> <div class="grid-content bg-purple-light"></div> </d-col>
+      <d-col :span="8"> <div class="grid-content bg-purple"></div> </d-col>
+    </d-row>
+    <d-row>
+      <d-col :span="6"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="6"> <div class="grid-content bg-purple-light"></div> </d-col>
+      <d-col :span="6"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="6"> <div class="grid-content bg-purple-light"></div> </d-col>
+    </d-row>
+    <d-row>
+      <d-col :span="4"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="4"> <div class="grid-content bg-purple-light"></div> </d-col>
+      <d-col :span="4"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="4"> <div class="grid-content bg-purple-light"></div> </d-col>
+      <d-col :span="4"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="4"> <div class="grid-content bg-purple-light"></div> </d-col>
+    </d-row>
+  </div>
+</template>
+
+<script>
+import { Row, Col } from 'ddui-dev'
+
+export default {
+  components: { 'd-row': Row, 'd-col': Col, },
+}
+</script>
+
+<style scoped lang="scss">
+.row { margin-bottom: 20px; &:last-child {margin-bottom: 0;} }
+.col {border-radius: 4px;}
+.bg-purple-dark {background: #d2d4d6;}
+.bg-purple {background: #c2c4c5;}
+.bg-purple-light {background: #aaabaf;}
+.grid-content {border-radius: 4px;min-height: 36px;}
+.row-bg {padding: 10px 0;background-color: #f9fafc;}
+</style>
+```
 
 #### 分栏间隔
 每一栏之间存在间隔。
-<br>
 
 <grid-gutter></grid-gutter>
 
 #### 使用方法
-未完成
+```vue
+<template>
+  <div>
+    <d-row gutter="20">
+      <d-col :span="6"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="6"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="6"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="6"> <div class="grid-content bg-purple"></div> </d-col>
+    </d-row>
+  </div>
+</template>
+
+<script>
+import { Row, Col } from 'ddui-dev'
+
+export default {
+  components: { 'd-row': Row, 'd-col': Col, },
+}
+</script>
+
+<style scoped lang="scss">
+//css同第一个示例
+</style>
+```
 
 #### 混合布局
 使用基础的 1/24 任意组合的混合布局。
-<br>
 
 <grid-gs></grid-gs>
 
 #### 使用方法
-未完成
+```vue
+<template>
+  <div>
+    <d-row :gutter="20">
+      <d-col :span="16"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="8"> <div class="grid-content bg-purple"></div> </d-col>
+    </d-row>
+    <d-row :gutter="20">
+      <d-col :span="8"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="8"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="4"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="4"> <div class="grid-content bg-purple"></div> </d-col>
+    </d-row>
+    <d-row :gutter="20">
+      <d-col :span="4"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="16"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="4"> <div class="grid-content bg-purple"></div> </d-col>
+    </d-row>
+  </div>
+</template>
+
+<script>
+import { Row, Col } from 'ddui-dev'
+
+export default {
+  components: { 'd-row': Row, 'd-col': Col, },
+}
+</script>
+
+<style scoped lang="scss">
+//css同第一个示例
+</style>
+```
 
 #### 分栏偏移
 设置需要偏移的栏数。
-<br>
 
 <grid-offset></grid-offset>
 
 #### 使用方法
-未完成
+```vue
+<template>
+  <div>
+    <d-row :gutter="20">
+      <d-col :span="6"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="6" :offset="6"> <div class="grid-content bg-purple"></div> </d-col>
+    </d-row>
+    <d-row :gutter="20">
+      <d-col :span="6" :offset="6"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="6" :offset="6"> <div class="grid-content bg-purple"></div> </d-col>
+    </d-row>
+    <d-row :gutter="20">
+      <d-col :span="12" :offset="6"> <div class="grid-content bg-purple"></div> </d-col>
+    </d-row>
+  </div>
+</template>
+
+<script>
+import { Row, Col } from 'ddui-dev'
+
+export default {
+  components: { 'd-row': Row, 'd-col': Col, }, }
+</script>
+
+<style scoped lang="scss">
+//css同第一个示例
+</style>
+```
 
 #### 对齐方式
 通过<code>flex属性</code>来对分栏进对齐。
-<br>
 
 <grid-flex></grid-flex>
 
 #### 使用方法
-未完成
+```vue
+<template>
+  <div>
+    <d-row align="left">
+      <d-col :span="6"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="6"> <div class="grid-content bg-purple-light"></div> </d-col>
+      <d-col :span="6"> <div class="grid-content bg-purple"></div> </d-col>
+    </d-row>
+    <d-row align="right">
+      <d-col :span="6"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="6"> <div class="grid-content bg-purple-light"></div> </d-col>
+      <d-col :span="6"> <div class="grid-content bg-purple"></div> </d-col>
+    </d-row>
+    <d-row align="center">
+      <d-col :span="6"> <div class="grid-content bg-purple"></div> </d-col>
+      <d-col :span="6"> <div class="grid-content bg-purple-light"></div> </d-col>
+      <d-col :span="6"> <div class="grid-content bg-purple"></div> </d-col>
+    </d-row>
+  </div>
+</template>
+
+<script>
+import { Row, Col } from 'ddui-dev'
+
+export default {
+  components: { 'd-row': Row, 'd-col': Col, },
+}
+</script>
+
+<style scoped lang="scss">
+//css同第一个示例
+</style>
+```
 
 #### 响应布局
 借鉴 Bootstrap 的响应式设计，设置了四个响应尺寸：<code>ipad、narrowPc、pc、widePc</code>。
-<br>
 
 <grid-boot></grid-boot>
 
 #### 使用方法
-未完成
+```vue
+<template>
+  <div>
+    <d-row>
+      <d-col :span="12" :ipad="{span:8}" 
+             :narrow-pc="{span:8}" :pc="{span:2}" :wide-pc="{span:1}">
+        <div class="grid-content bg-purple"></div>
+      </d-col>
+      <d-col :span="4" :ipad="{span:8}" 
+              :narrow-pc="{span:14}" :pc="{span:20}" :wide-pc="{span:20}">
+        <div class="grid-content bg-purple-light"></div>
+      </d-col>
+      <d-col :span="8" :ipad="{span:8}" 
+              :narrow-pc="{span:2}" :pc="{span:2}" :wide-pc="{span:1}">
+        <div class="grid-content bg-purple"></div>
+      </d-col>
+    </d-row>
+  </div>
+</template>
+
+<script>
+import { Row, Col } from 'ddui-dev'
+
+export default {
+  components: { 'd-row': Row, 'd-col': Col, },
+}
+</script>
+
+<style scoped lang="scss">
+//css同第一个示例
+</style>
+```
 
 #### Row Attributes
 <table>

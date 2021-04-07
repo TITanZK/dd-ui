@@ -8,7 +8,30 @@ title: Input 文本输入框
 <input-demo></input-demo>
 
 #### 使用方法
-未完成
+```vue
+<template>
+  <div>
+      <d-input></d-input>
+      <d-input value="你好"></d-input>
+      <d-input value="你好" disabled></d-input>
+      <d-input value="你好" readonly></d-input>
+      <d-input value="你好" error="昵称最少2个字"></d-input>
+      <d-input v-model="message"></d-input>
+      <span>{{ message }}</span>
+  </div>
+</template>
+
+<script>
+import {Input,Row} from 'ddui-dev'
+
+export default {
+  components: { 'd-input': Input, 'd-row': Row },
+  data() {
+    return { message: '你好' }
+  }
+}
+</script>
+```
 
 #### Attributes
 <table>
