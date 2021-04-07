@@ -1,9 +1,12 @@
+const path = require('path')
+
 module.exports = {
-  title: '多多 UI',
+  title: 'Duoduo',
   description: '一个好用且精美的UI框架',
+  palette: path.resolve(__dirname, 'palette.styl'),
   themeConfig: {
     displayAllHeaders: true, // 默认值：false
-    logo: '/assets/img/hero.png',
+    // logo: '/assets/img/hero.png',
     nav: [
       {text: '主页', link: '/'},
       {text: '文档', link: '/get-started/'},
