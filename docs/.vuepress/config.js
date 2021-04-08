@@ -1,8 +1,12 @@
 const path = require('path')
 
 module.exports = {
+  base:'/ddui-doc/',
   title: 'Duoduo',
   description: '一个好用且精美的UI框架',
+  head: [
+    ['link', { rel: 'icon', href: '/assets/img/hero.png' }]
+  ],
   palette: path.resolve(__dirname, 'palette.styl'),
   themeConfig: {
     displayAllHeaders: true, // 默认值：false
