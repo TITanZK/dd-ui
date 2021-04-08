@@ -8,7 +8,9 @@ title: Grid 网格布局
 #### 基础布局
 最基础的栅格布局。
 
-<grid-demo></grid-demo>
+<ClientOnly>
+  <grid-demo></grid-demo>
+</ClientOnly>
 
 #### 使用方法  
 ```vue
@@ -65,7 +67,9 @@ export default {
 #### 分栏间隔
 每一栏之间存在间隔。
 
-<grid-gutter></grid-gutter>
+<ClientOnly>
+  <grid-gutter></grid-gutter>
+</ClientOnly>
 
 #### 使用方法
 ```vue
@@ -96,7 +100,9 @@ export default {
 #### 混合布局
 使用基础的 1/24 任意组合的混合布局。
 
-<grid-gs></grid-gs>
+<ClientOnly>
+  <grid-gs></grid-gs>
+</ClientOnly>
 
 #### 使用方法
 ```vue
@@ -136,7 +142,9 @@ export default {
 #### 分栏偏移
 设置需要偏移的栏数。
 
-<grid-offset></grid-offset>
+<ClientOnly>
+  <grid-offset></grid-offset>
+</ClientOnly>
 
 #### 使用方法
 ```vue
@@ -171,7 +179,9 @@ export default {
 #### 对齐方式
 通过<code>flex属性</code>来对分栏进对齐。
 
-<grid-flex></grid-flex>
+<ClientOnly>
+  <grid-flex></grid-flex>
+</ClientOnly>
 
 #### 使用方法
 ```vue
@@ -211,7 +221,9 @@ export default {
 #### 响应布局
 借鉴 Bootstrap 的响应式设计，设置了四个响应尺寸：<code>ipad、narrowPc、pc、widePc</code>。
 
-<grid-boot></grid-boot>
+<ClientOnly>
+  <grid-boot></grid-boot>
+</ClientOnly>
 
 #### 使用方法
 ```vue

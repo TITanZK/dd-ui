@@ -5,7 +5,9 @@ title: Input 文本输入框
 ### Input 文本输入框 
 
 #### 样式预览
-<input-demo></input-demo>
+<ClientOnly>
+  <input-demo></input-demo>
+</ClientOnly>
 
 #### 使用方法
 ```vue

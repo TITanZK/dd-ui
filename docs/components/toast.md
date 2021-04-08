@@ -5,7 +5,9 @@ title: Toast 消息提示
 ### Toast 消息提示
 
 #### 样式预览
-<toast-demo></toast-demo>
+<ClientOnly>
+  <toast-demo></toast-demo>
+</ClientOnly>
 
 #### 使用方法
 ```vue

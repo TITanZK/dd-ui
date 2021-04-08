@@ -5,7 +5,9 @@ title: Button 按钮
 ### Button 按钮 
 
 #### 样式预览
-<button-demo></button-demo>
+<ClientOnly>
+  <button-demo></button-demo>
+</ClientOnly>
 
 #### 使用方法
 ```vue

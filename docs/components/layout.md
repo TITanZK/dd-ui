@@ -5,7 +5,9 @@ title: Layout 布局
 ### Layout 布局
 
 #### 样式预览
-<layout-demo></layout-demo>
+<ClientOnly>
+  <layout-demo></layout-demo>
+</ClientOnly>
 
 #### 使用方法
 ```vue

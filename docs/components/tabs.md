@@ -5,7 +5,9 @@ title: Tabs 标签页
 ### Tabs 标签页
 
 #### 样式预览
-<tabs-demo></tabs-demo>
+<ClientOnly>
+  <tabs-demo></tabs-demo>
+</ClientOnly>
 
 #### 使用方法
 ```vue

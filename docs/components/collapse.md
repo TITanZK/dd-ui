@@ -5,8 +5,9 @@ title: Collapse 手风琴
 ### Collapse 手风琴
 
 #### 样式预览
-<collapse-demo></collapse-demo>
-
+<ClientOnly>
+  <collapse-demo></collapse-demo>
+</ClientOnly>
 
 #### 使用方法
 ```vue
