@@ -1,6 +1,6 @@
 ## 多多 UI — 基于 Vue 的 UI 组件库
 
-官方文档
+[官方文档](https://zk_titan.gitee.io/ddui-doc/)
 
 这个 UI 库是我在学习 Vue 的时候开发的一个简单 UI 库，目前只有一些简单的组件。
 
