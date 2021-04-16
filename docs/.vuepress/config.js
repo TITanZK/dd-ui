@@ -15,6 +15,7 @@ module.exports = {
       {text: '主页', link: '/'},
       {text: '文档', link: '/get-started/'},
       {text: 'GitHub', link: 'https://github.com/TITanZK/dd-ui'},
+      {text: '简单总结', link: 'https://zhuanlan.zhihu.com/p/365439928'},
     ],
     sidebar: [
       {
